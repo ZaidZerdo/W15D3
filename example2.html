@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Example 2</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var employee1 = {
+				id: 1,
+				name: "Nidal",
+				salary: 10000,
+				
+				increaseSalary: function(amount) {
+					this.salary += amount;
+				}
+			}
+			
+			document.write(employee1.salary + "<br>");
+			employee1.increaseSalary(500);
+			document.write(employee1.salary + "<br>");
+			employee1.increaseSalary(500);
+			document.write(employee1.salary + "<br>");
+			
+			
+			var counter = {
+				count: 0,
+				
+				increaseCounter: function() {
+					this.count++;
+				}
+			}
+			
+			document.write("Nesto drugo sada... <br>")
+			document.write(counter.count + "<br>");
+			counter.increaseCounter();
+			counter.increaseCounter();
+			counter.count = -211238;
+			counter.increaseCounter();
+			document.write(counter.count + "<br>");
+			
+			document.write("Nesto trece sada... <br>")
+			var a = [];
+			a.push(5);
+			a.push(":D");
+			a.push(true);
+			a.push(3.14159);
+			a.push((function() {
+				return (function() {
+					return (function() {
+						alert("xD");
+					});
+				});
+			}));
+			a.push((function(name) {
+				alert("Hello, " + name + "!");
+			}));
+			
+			a.pop()("Mladen");
+			a.pop()()()();
+			
+			document.write(a + "<br>");
+			/* document.write(a.pop() + "<br>");
+			document.write(a.pop() + "<br>");
+			document.write(a.pop() + "<br>");
+			document.write(a.pop() + "<br>"); */
+		</script>
+	</body>
+</html>

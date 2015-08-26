@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Example 1</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var showAlert = (function() {
+				var a = 5;
+				var b = 2;
+				
+				var c = a * b;
+				
+				alert("Result: " + c);
+			});
+			
+			showAlert();
+			
+			var counter = 0;			
+			
+			function count() {	
+				counter++;
+			}			
+			
+			count();
+			count();
+			counter = 0;
+			count();
+			count();
+			
+			
+			
+			var count2 = (function() {
+				var counter2 = 0;
+				
+				document.write("Start: " + counter2 + "<br>")
+				var funcount = (function() {
+					counter2++;
+					document.write(counter2 + "<br>");
+				});
+				
+				return funcount;
+			}) ();
+			
+			count2();
+			count2();
+			count2();
+			
+			
+			
+		</script>
+	</body>
+</html>
